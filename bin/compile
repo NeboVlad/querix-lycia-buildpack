@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
+echo "======= uname ========"
+uname -a
+
 set -e
 set -o pipefail
 
 BUILD_DIR=$1
 CACHE_DIR=$2
 BUILDPACKS_DIR=$(dirname $(dirname $0))
-
-echo "======= uname ========"
-uname -a
 
 function indent() {
   sed -u 's/^/       /'
