@@ -1,2 +1,1 @@
 echo "======= hostname ========" >&2
-hostname
