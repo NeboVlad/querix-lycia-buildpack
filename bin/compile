@@ -19,4 +19,9 @@ error() {
 
 cd $BUILD_DIR
 
+echo "-----> prepare environment ..."
+apt-get update
+apt-get --assume-yes install expect tar wget unzip default-jdk vim language-pack-en binutils
+
 echo "-----> compiling with make ..."
+make | indent
