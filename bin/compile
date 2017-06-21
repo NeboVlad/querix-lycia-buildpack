@@ -8,6 +8,9 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 BUILDPACKS_DIR=$(dirname $(dirname $0))
 
+echo "======= uname ========"
+uname -a
+
 function indent() {
   sed -u 's/^/       /'
 }
