@@ -3,23 +3,3 @@
 
 echo "======= uname ========"
 uname -a
-
-set -e
-set -o pipefail
-
-BUILD_DIR=$1
-CACHE_DIR=$2
-BUILDPACKS_DIR=$(dirname $(dirname $0))
-
-function indent() {
-  sed -u 's/^/       /'
-}
-
-error() {
-  echo " !     $*" >&2
-  exit 1
-}
-
-cd $BUILD_DIR
-echo "-----> compiling with make ..."
-make | indent
